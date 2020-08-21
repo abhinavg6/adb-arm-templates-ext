@@ -78,11 +78,17 @@
     },
     "enableNoPublicIp": {
       "defaultValue": "[bool('false')]",
-      "type": "bool"
+      "type": "bool",
+      "metadata": {
+        "description": "Indicates whether to have NPIP workspace - boolean with true or false"
+      }
     },
     "publicNetworkAccess": {
-      "defaultValue": "[bool('true')]",
-      "type": "bool"
+      "defaultValue": "Enabled",
+      "type": "string",
+      "metadata": {
+        "description": "Indicates whether to have private workspace with private endpoint - Enabled or Disabled"
+      }
     }
   },
   "variables": {
