@@ -87,7 +87,14 @@
       "defaultValue": "Enabled",
       "type": "string",
       "metadata": {
-        "description": "Indicates whether to have private workspace with private endpoint - Enabled or Disabled"
+        "description": "Indicates whether public network access is allowed to the workspace with private endpoint - possible values are Enabled or Disabled"
+      }
+    },
+    "requiredNsgRules": {
+      "defaultValue": "AllRules",
+      "type": "string",
+      "metadata": {
+        "description": "Indicates whether to retain or remove the AzureDatabricks outbound NSG rule - possible values are AllRules or NoAzureDatabricksRules"
       }
     }
   },
@@ -179,7 +186,8 @@
             "value": "[parameters('enableNoPublicIp')]"
           }
         },
-        "publicNetworkAccess": "[parameters('publicNetworkAccess')]"
+        "publicNetworkAccess": "[parameters('publicNetworkAccess')]",
+        "requiredNsgRules": "[parameters('requiredNsgRules')]"
       }
     }
   ]
