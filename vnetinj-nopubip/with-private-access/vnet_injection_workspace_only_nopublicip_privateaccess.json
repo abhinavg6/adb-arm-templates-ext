@@ -48,7 +48,7 @@
       }
     },
     "enableNoPublicIp": {
-      "defaultValue": "[bool('false')]",
+      "defaultValue": "[bool('true')]",
       "type": "bool",
       "metadata": {
         "description": "Indicates whether to have NPIP workspace - boolean with true or false"
